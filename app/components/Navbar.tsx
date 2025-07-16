@@ -1,6 +1,6 @@
 import React from 'react'
 import {FaInstagram, FaTwitter, FaGithub} from 'react-icons/fa'
-
+import Link from 'next/link';
 const Navbar = () => {
   return (
     <nav className='min-h-full bg-[#1B1B1B] rounded-b-lg mt-2 mx-2 px-0 py-5 max-w-4xl mx-auto'>
