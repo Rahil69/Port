@@ -41,16 +41,16 @@ const Project = () => {
           {[...Array(5)].map((_, i) => (
             <li
               key={i}
-              className="p-6 rounded-lg  border-gray-800 bg-gray-800 shadow text-left w-full md:w-72 flex flex-col justify-between"
+              className="p-6 rounded-lg bg-gray-100 shadow text-left w-full md:w-72 flex flex-col justify-between"
             >
-              <div className="h-6 w-32 bg-gray-700 rounded mb-4 animate-pulse" />
+              <div className="h-6 w-32 bg-[#181818] rounded mb-4 animate-pulse" />
               <div className="text-sm text-gray-800 mt-2 flex items-center justify-between">
                 <span>
-                  <span className="h-4 w-20 bg-gray-700 rounded inline-block align-middle animate-pulse" />
+                  <span className="h-4 w-20 bg-[#181818] rounded inline-block align-middle animate-pulse" />
                 </span>
                 <span className="flex items-center ml-7">
-                  <span className="text-gray-600 text-lg mr-2"></span>
-                  <span className="h-4 w-4 bg-gray-700 rounded inline-block align-middle animate-pulse" />
+                  <span className="text-[#181818] text-lg mr-2"></span>
+                  <span className="h-4 w-4 bg-[#181818] rounded inline-block align-middle animate-pulse" />
                 </span>
               </div>
             </li>

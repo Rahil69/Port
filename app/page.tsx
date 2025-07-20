@@ -21,7 +21,12 @@ export default function HomePage() {
                     <div className="max-w-xl w-full px-4 text-center">
                         <h1 className="text-2xl text-white mb-6">Raahil Mu-umin</h1>
                         <p className="text-gray-400 mb-6 text-sm">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste est aspernatur nobis cum sed tenetur dignissimos modi id atque distinctio. Nostrum, earum. Odio, ea quia.</p>
-                        <button onClick={handleScrollToFooter} className="bg-[#1B1B1B] hover:bg-[#181818] text-gray-200 font-semibold py-4 px-12 rounded-md text-sm shadow-lg shadow-gray-700/15 transition-all"> contact me </button>
+                        <a href="mailto:moominraahil@gmail.com">
+                            <button className="bg-[#1B1B1B] hover:bg-[#181818] text-gray-200 font-semibold py-4 px-12 rounded-md text-sm shadow-lg shadow-gray-700/15 transition-all">
+                                contact me
+                                <span> → </span>
+                            </button> 
+                        </a>
                     </div>
                 </section>
 
