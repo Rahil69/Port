@@ -16,6 +16,10 @@ const Project = () => {
     fetch('https://api.github.com/users/Rahil69/repos?per_page=5&sort=updated')
       .then((res) => res.json())
       .then(async (data) => {
+        if (!Array.isArray(data)) {
+          setRepos([]);
+          return;
+        }
         const reposWithLang = await Promise.all(
           data.map(async (repo: Repo) => {
             const langRes = await fetch(repo.languages_url);
@@ -27,6 +31,34 @@ const Project = () => {
         setRepos(reposWithLang);
       });
   }, []);
+
+  // Placeholder cards if no repos
+  if (repos.length === 0) {
+    return (
+      <div className='font-mono'>
+        <h3 className="text-lg mb-4 text-gray-200 ">Github Repositories</h3>
+        <ul className="flex flex-col md:flex-row gap-8 justify-center">
+          {[...Array(5)].map((_, i) => (
+            <li
+              key={i}
+              className="p-6 rounded-lg  border-gray-800 bg-gray-800 shadow text-left w-full md:w-72 flex flex-col justify-between"
+            >
+              <div className="h-6 w-32 bg-gray-700 rounded mb-4 animate-pulse" />
+              <div className="text-sm text-gray-800 mt-2 flex items-center justify-between">
+                <span>
+                  <span className="h-4 w-20 bg-gray-700 rounded inline-block align-middle animate-pulse" />
+                </span>
+                <span className="flex items-center ml-7">
+                  <span className="text-gray-600 text-lg mr-2"></span>
+                  <span className="h-4 w-4 bg-gray-700 rounded inline-block align-middle animate-pulse" />
+                </span>
+              </div>
+            </li>
+          ))}
+        </ul>
+      </div>
+    );
+  }
 
   return (
     <div className='font-mono'>
