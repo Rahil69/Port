@@ -24,13 +24,11 @@ const Navbar = () => {
             </li>
           ))}
         </ul>
-        {/* Social Icons */}
         <div className="flex gap-4 text-xl">
           <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white duration-500"><FaInstagram /></a>
           <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white duration-500"><FaTwitter /></a>
-          <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white duration-500"><FaGithub /></a>
+          <a href="https://github.com/Rahil69" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white duration-500"><FaGithub /></a>
         </div>
-        {/* Hamburger Icon */}
         <button
           className="md:hidden text-gray-400 text-2xl ml-4"
           onClick={() => setMenuOpen(!menuOpen)}
@@ -39,7 +37,6 @@ const Navbar = () => {
           {menuOpen ? <FaTimes /> : <FaBars />}
         </button>
       </div>
-      {/* Mobile Menu */}
       {menuOpen && (
         <ul className="md:hidden flex flex-col items-center gap-6 mt-4 pb-4">
           {navLinks.map((link) => (
