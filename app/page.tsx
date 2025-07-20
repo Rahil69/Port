@@ -5,12 +5,7 @@ import Footer from "./components/Footer";
 import More from "./components/More";
 import Project from "./components/Projects";
 export default function HomePage() {
-    const handleScrollToFooter = useCallback(() => {
-        const footer = document.getElementById('footer');
-        if (footer) {
-            footer.scrollIntoView({ behavior: 'smooth' });
-        }
-    }, []);
+
 
     return(
         <div>
