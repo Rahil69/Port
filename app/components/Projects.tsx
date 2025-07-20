@@ -65,7 +65,7 @@ const Project = () => {
       <h3 className="text-lg  mb-4 text-gray-200 ">Github Repositories</h3>
       <ul className="flex flex-col md:flex-row gap-8 justify-center">
       {repos.map((repo) => (
-          <li key={repo.id} className="p-6 rounded-lg bg-[#181818] shadow text-left w-full md:w-72">
+          <li key={repo.id} className="transition-transform duration-200 transform hover:scale-105 p-6 rounded-lg bg-[#181818] shadow text-left w-full md:w-72">
             <a href={repo.html_url} target="_blank" rel="noopener noreferrer" className="text-blue-400 font-semibold hover:underline">
               {repo.name}
             </a>
