@@ -1,6 +1,5 @@
 'use client'
 import Navbar from "./components/Navbar"
-import { useCallback } from "react";
 import Footer from "./components/Footer";
 import More from "./components/More";
 import Project from "./components/Projects";
